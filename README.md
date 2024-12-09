@@ -11,17 +11,17 @@
 
 이 서비스는 사용자의 음성을 기반으로 졸음의 징후를 실시간으로 감지하며, AI와의 자연스러운 대화를 통해 운전자가 깨어 있을 수 있도록 돕는 것을 목표로 합니다.
 
-
+---
 
 ## 👩🏻‍💻 Tech Stacks         
 
 ### FrontEnd
-- **React-Native**: [공식 문서](https://ko.legacy.reactjs.org/)
-- **TypeScript**: [공식 문서](https://www.typescriptlang.org/ko/)
+- React-Native: [공식 문서](https://ko.legacy.reactjs.org/)
+- TypeScript: [공식 문서](https://www.typescriptlang.org/ko/)
 
 ### BackEnd
-- **Spring Boot**: [공식 문서](https://spring.io/projects/spring-boot)
-- **MySQL**: [공식 문서](https://www.mysql.com)
+- Spring Boot: [공식 문서](https://spring.io/projects/spring-boot)
+- MySQL: [공식 문서](https://www.mysql.com)
 
 ### AI
 - **개인 맞춤형 대화 생성**:
@@ -33,12 +33,12 @@
   - TensorFlow 2.0: YAMNet 및 딥러닝 모델 구현
 
 ### 배포 및 CI/CD
-- **GitHub Actions**
-- **AWS EC2**
-- **Docker**
+- GitHub Actions
+- AWS EC2
+- Docker
 
 ### Communication
-- **Notion**
-- **Figma**
+- Notion
+- Figma
 
 <br/>
