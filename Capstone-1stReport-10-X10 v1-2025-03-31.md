@@ -6,7 +6,7 @@
 # Team-Info
 | (1) 과제명 | 음성 분석 기반 졸음 감지 및 개인화된 음성 대화를 통한 졸음 운전 예방 서비스
 |:---  |---  |
-| (2) 팀 번호 / 팀 이름 | 10-X10 |
+| (2) 팀 번호 / 팀 이름 | 10 - X10 |
 | (3) 팀 구성원 | **곽선호 (2076017)**<br> - 리더, Backend Developer / 스토리지 설계 및 구현 (ERD 작성, RDS), API 설계, 서버 로직 코드 구현, 무중단 서버 구축 및 배포 <br><br> **강민정(2229001)** <br> - 팀원, AI Developer / 머신러닝 모델 개발(졸린 음성 감지, 하품 음성 감지, 대화 내용 요약), AI 모델 서빙 <br><br> **안수이 (2128014)** <br> - 팀원, Frontend Developer / UI 디자인 및 설계, 안드로이드 앱의 화면 구성과 디자인 요소 기획, API 요청 및 응답 관리, 비동기 처리 및 상태 관리, 서비스 최종 점검			 |
 | (4) 팀 지도교수 | 오세은 교수님 |
 | (5) 과제 분류 | 산학과제 |
@@ -29,10 +29,10 @@
 # Project-Design & Implementation
 | 항목 | 내용 |
 |:---  |---  |
-| (1) 요구사항 정의 |<br> **1. 기능별 상세 요구사항(또는 유스케이스)**<br>![image](https://github.com/user-attachments/assets/6177c265-7e05-4df4-81cf-eb6533b9d2b5)![image](https://github.com/user-attachments/assets/83112a97-53b3-4cb7-85ba-dc8c6cf512a0) <br><br><br> **2. 설계 모델(클래스 다이어그램, 클래스 및 모듈 명세서)**<br>![image](https://github.com/user-attachments/assets/46f819d3-c429-42cb-ae8d-82db116b3fa4)<br><br><br> **3. UI 분석/설계 모델** <br>* 주요 화면 설계<br><br>![image](https://github.com/user-attachments/assets/4e02cc65-2060-4741-92b5-552f46416069)<br><br><br> **4. E-R 다이어그램/DB 설계 모델(테이블 구조)**<br><br>![image](https://github.com/user-attachments/assets/dfed55d1-8702-4f7b-891e-ed71b2fe9a13)<br>|
+| (1) 요구사항 정의 |<br> **1. 기능별 상세 요구사항(또는 유스케이스)**<br>![image](https://github.com/user-attachments/assets/6177c265-7e05-4df4-81cf-eb6533b9d2b5)![image](https://github.com/user-attachments/assets/83112a97-53b3-4cb7-85ba-dc8c6cf512a0) <br><br><br> **2. 설계 모델(클래스 다이어그램, 클래스 및 모듈 명세서)**<br>![image](https://github.com/user-attachments/assets/46f819d3-c429-42cb-ae8d-82db116b3fa4)<br><br><br> **3. UI 분석/설계 모델** <br>* 주요 화면 설계<br><br>![image](https://github.com/user-attachments/assets/4e02cc65-2060-4741-92b5-552f46416069)<br><br><br> **4. E-R 다이어그램/DB 설계 모델(테이블 구조)**<br><br>![image](https://github.com/user-attachments/assets/dfed55d1-8702-4f7b-891e-ed71b2fe9a13)|
 | (2) 전체 시스템 구성 |<br>![image](https://github.com/user-attachments/assets/6185d9a3-b6c5-41ed-9a64-b66228d04d1c)|
 | (3) 주요엔진 및 기능 설계 | *프로젝트의 주요 기능 혹은 모듈의 설계내용에 대하여 기술한다 <br> SW 구조 그림에 있는 각 Module의 상세 구현내용을 자세히 기술한다.* |
-| (4) 주요 기능의 구현 | *<주요기능리스트>에 정의된 기능 중 최소 2개 이상에 대한 상세 구현내용을 기술한다.* |
-| (5) 기타 | **2024 SW 중심대학 생성형 AI 활용경험 공모전 우수상** |
+| (4) 주요 기능의 구현 |<br>1. **하품 감지 모델**<br>- AI-Hub의 ‘자연 및 인공적 발생 非언어적 소리 데이터’에서 ‘하품’ 레이블이 지정된 오디오 데이터를 사용하고, 모든 오디오 데이터는 16kHz로 리샘플링한다.<br> - 기존에는 YAMNet을 활용한 전이 학습 방식을 사용했으나, 특정 유형의 데이터에 과적합되는 경향을 보여 새로운 모델 구조 도입과 음성 증강을 시도하고 있다. CRNN(Convolutional Recurrent Neural Network)와 AST(Audio Spectrogram Transformer) 등의 모델을 비교 실험하고 있으며, 음성 증강 기법으로는 잡음 추가, 음높이 변화 등을 적용하여 데이터 다양성을 확보하고자 한다.<br>- 실시간 환경에서 추론 속도를 최적화하는 작업을 진행할 예정이다.<br><br>![image](https://github.com/user-attachments/assets/39abdf43-82f8-4492-8e90-ef7a890a72db)<br>![image](https://github.com/user-attachments/assets/42f32ed4-02b7-4423-b2d6-96d6474d502a)<br><br><br><br>2. **졸린 음색 감지 모델**<br>- EmoV-DB 데이터셋의 ‘Sleepy’ 레이블이 지정된 오디오 데이터를 사용하고, 모든 오디오 데이터는 16kHz로 리샘플링한다.<br>- 기존에는 MFCC 특징 벡터를 입력으로 하는 신경망을 구축했으나, 성능 문제로 인해 새로운 모델을 검토하고 있다. 현재 실험 중인 모델은 VGGish, HuBERT, TitaNet 등이 있다.<br>- 추후 실시간 환경에서 추론 속도를 최적화하는 작업을 진행할 예정이다.<br>![image](https://github.com/user-attachments/assets/6652636f-ed87-449e-bcac-f5e0bf64e5b3)<br>![image](https://github.com/user-attachments/assets/e3653737-0917-46a1-af1a-81536226f5c3)<br><br><br><br>3. **프롬프트 엔지니어링으로 구현한 개인 맞춤형 음성 챗봇**<br>- 우리 프로젝트는 초기에 입력한 사용자의 정보에 따라 실제 친구처럼 맞춤형 대화를 하는 기능을 가지고 있어 프롬프트 엔지니어링으로 이를 해결했다. 여러 번 시행착오를 겪으며 프롬프트 내용을 수정하였다.<br><br> - 시나리오<br>대화 시작 버튼 클릭 <br> → gpt가 사용자에게 말을 걸어 음성 대화를 시작한다.<br> → 사용자 맞춤 정보를 기반으로 대화한다.<br><br>![image](https://github.com/user-attachments/assets/9dc482e2-df07-4845-b03d-fc5bb4a386fc)<br>![image](https://github.com/user-attachments/assets/cee0e6c8-f426-4370-ba12-46eea2f80c2c)<br>![image](https://github.com/user-attachments/assets/d16db0e0-db2b-43d1-bc54-c6e825093d69)|
+| (5) 기타 | **2024 SW 중심대학 생성형 AI 활용경험 공모전 우수상 수상** |
 
 <br>
