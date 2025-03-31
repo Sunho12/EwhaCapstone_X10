@@ -15,15 +15,15 @@
 
 ## 👩🏻‍💻 Tech Stacks         
 
-### FrontEnd
+### FrontEnd - [Repository](https://github.com/EwhaCapstone-X10/Client)
 - React-Native: [공식 문서](https://ko.legacy.reactjs.org/)
 - TypeScript: [공식 문서](https://www.typescriptlang.org/ko/)
 
-### BackEnd
+### BackEnd - [Repository](https://github.com/EwhaCapstone-X10/Server)
 - Spring Boot: [공식 문서](https://spring.io/projects/spring-boot)
 - MySQL: [공식 문서](https://www.mysql.com)
 
-### AI
+### AI - [Repository](https://github.com/EwhaCapstone-X10/AI)
 - **개인 맞춤형 대화 생성**:
   - GPT-4o Audio Preview: 자연스러운 맞춤형 음성 대화 구현
 - **하품 감지**:
