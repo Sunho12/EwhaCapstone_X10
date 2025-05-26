@@ -32,10 +32,9 @@
 - **개인 맞춤형 대화 생성**:
   - GPT-4o Audio Preview: 자연스러운 맞춤형 음성 대화 구현
 - **하품 감지**:
-  - Librosa, Wav2Vec 2.0: Audio Feature 추출
-  - scikit-learn RandomForestClassifier: 졸린 음성 이진 분류
-  - YAMNet: 하품 감지 transfer learning을 위한 pretrained 모델
-  - TensorFlow 2.0: YAMNet 및 딥러닝 모델 구현
+  - Wav2Vec2.0: 하품 음성 감지를 위한 Audio Feature 추출
+  - AudioSpectrogramTrasformer(AST): 졸린 음색 감지를 통한 음성 피로도 추정 모델
+  - Pytorch: 딥러닝 모델 구현
 
 ### 배포 및 CI/CD
 - GitHub Actions
