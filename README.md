@@ -1,4 +1,9 @@
+<img width="1000" alt="image" src="https://github.com/user-attachments/assets/137dad5f-a6cc-4320-b576-1457bb3f8a32" />
+
+
 # 🚘 DriveMate
+
+
 **음성 분석 기반 졸음 감지 및 음성 대화를 통한 졸음 운전 예방 서비스**
 
 ---
