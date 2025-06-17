@@ -78,8 +78,8 @@ docker run -d -p 8080:8080 --env-file .env drivemate-server
 ---
 
 ## 🎯 API TEST 안내
-DriveMate는 Kakao OAuth2 기반 인증/인가 시스템을 사용합니다.
-따라서 대부분의 API는 프론트엔드에서 전달받은 암호화된 카카오 ID 없이는 정상 동작하지 않습니다.
+DriveMate는 Kakao OAuth2 기반 인증/인가 시스템을 사용합니다.</br>
+따라서 대부분의 API는 프론트엔드에서 전달받은 암호화된 카카오 ID 없이는 정상 동작하지 않습니다.</br>
 API 테스트를 위해서는 Kakao 인증 절차가 선행되어야 합니다.
 
 
